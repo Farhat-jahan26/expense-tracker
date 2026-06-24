@@ -202,33 +202,33 @@ export default function DashboardPage() {
           )}
 
           <div>
-            <label className="block text-sm font-medium mb-1">Title</label>
+            <label className="block text-sm font-medium text-gray-900 mb-1">Title</label>
             <input
               type="text"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full border border-gray-300 rounded px-3 py-2"
+              className="w-full border border-gray-300 rounded px-3 py-2 text-gray-900"
               placeholder="e.g. Groceries"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Amount</label>
+            <label className="block text-sm font-medium text-gray-900 mb-1">Amount</label>
             <input
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              className="w-full border border-gray-300 rounded px-3 py-2"
+              className="w-full border border-gray-300 rounded px-3 py-2 text-gray-900"
               placeholder="e.g. 500"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Category</label>
+            <label className="block text-sm font-medium text-gray-900 mb-1">Category</label>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full border border-gray-300 rounded px-3 py-2"
+              className="w-full border border-gray-300 rounded px-3 py-2 text-gray-900"
             >
               <option>Food</option>
               <option>Travel</option>
@@ -239,12 +239,12 @@ export default function DashboardPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Date</label>
+            <label className="block text-sm font-medium text-gray-900 mb-1">Date</label>
             <input
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full border border-gray-300 rounded px-3 py-2"
+              className="w-full border border-gray-300 rounded px-3 py-2 text-gray-900"
             />
           </div>
 
@@ -278,20 +278,20 @@ export default function DashboardPage() {
             <table className="w-full text-left">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="p-3 text-sm font-medium">Title</th>
-                  <th className="p-3 text-sm font-medium">Category</th>
-                  <th className="p-3 text-sm font-medium">Date</th>
-                  <th className="p-3 text-sm font-medium">Amount</th>
-                  <th className="p-3 text-sm font-medium">Action</th>
+                  <th className="p-3 text-sm font-medium text-gray-900">Title</th>
+                  <th className="p-3 text-sm font-medium text-gray-900">Category</th>
+                  <th className="p-3 text-sm font-medium text-gray-900">Date</th>
+                  <th className="p-3 text-sm font-medium text-gray-900">Amount</th>
+                  <th className="p-3 text-sm font-medium text-gray-900">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {expenses.map((exp) => (
                   <tr key={exp.id} className="border-t">
-                    <td className="p-3">{exp.title}</td>
-                    <td className="p-3">{exp.category}</td>
-                    <td className="p-3">{exp.date}</td>
-                    <td className="p-3">₹{exp.amount}</td>
+                    <td className="p-3 text-gray-900">{exp.title}</td>
+                    <td className="p-3 text-gray-900">{exp.category}</td>
+                    <td className="p-3 text-gray-900">{exp.date}</td>
+                    <td className="p-3 text-gray-900">₹{exp.amount}</td>
                     <td className="p-3 flex gap-3">
                       <button
                         onClick={() => handleEditClick(exp)}
@@ -318,14 +318,14 @@ export default function DashboardPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-500 mb-1">Total Expense</p>
+            <p className="text-sm text-gray-600 mb-1">Total Expense</p>
             <p className="text-3xl font-bold text-blue-600">
               ₹{totalExpense.toFixed(2)}
             </p>
           </div>
 
           <div className="bg-white rounded-lg shadow p-6">
-            <p className="text-sm text-gray-500 mb-1">This Month</p>
+            <p className="text-sm text-gray-600 mb-1">This Month</p>
             <p className="text-3xl font-bold text-green-600">
               ₹{thisMonthExpense.toFixed(2)}
             </p>
