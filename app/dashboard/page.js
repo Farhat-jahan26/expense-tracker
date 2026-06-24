@@ -344,8 +344,7 @@ export default function DashboardPage() {
                   nameKey="name"
                   cx="50%"
                   cy="50%"
-                  outerRadius={100}
-                  label={({ name, value }) => `${name}: ₹${value.toFixed(0)}`}
+                  outerRadius={100} 
                 >
                   {chartData.map((entry, index) => (
                     <Cell
