@@ -66,7 +66,7 @@ export default function LoginPage() {
         </div>
 
         {/* PASSWORD */}
-        <div className="mb-6">
+        <div className="mb-2">
           <label className="mb-1 block text-sm font-medium text-black">
             Password
           </label>
@@ -88,6 +88,16 @@ export default function LoginPage() {
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
           </div>
+        </div>
+
+        {/* FORGOT PASSWORD */}
+        <div className="mb-6 text-right">
+          <Link
+            href="/forgot-password"
+            className="text-sm text-blue-600 hover:underline"
+          >
+            Forgot password?
+          </Link>
         </div>
 
         {/* BUTTON */}
